@@ -33,12 +33,42 @@ const Applyjob =()=>{
 
     return<div>
         <h1>Applyjob</h1>
+        <button onClick={()=>{
+            axios.get('http://localhost:3001/jobs?_sort=Salary&_order=desc')
+            .then(function (response) {
+              // handle success
+              console.log(response.data);
+              setMainjob(response.data)
+            })
+            .catch(function (error) {
+              // handle error
+              console.log(error);
+            })
+        }}
+        
+        >Sort-Salary </button>
+        <button
+        onClick={()=>{
+            axios.get('http://localhost:3001/jobs?title=SDE2')
+  .then(function (response) {
+    // handle success
+    console.log(response.data);
+    setMainjob(response.data)
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+        }}
+        
+        >Filter-SDE2</button>
          {mainjobs?.map((el, i)=> 
          
          <div key={i} style={{
              border : "1px solid black",
              padding : "20px",
-
+             margin : "20px"
+            
          }}>
              
              <h3>Job Title : {el?.title}</h3>

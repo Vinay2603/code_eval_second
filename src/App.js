@@ -5,6 +5,7 @@ import { Admin } from './component/Admin';
 import { Applyjob } from './component/Applyjob';
 import { Login } from './component/Login';
 import { Routes,Route } from 'react-router-dom';
+import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -13,7 +14,11 @@ function App() {
        <Navbar/>
 <Routes>
       <Route path="/" element={ <Home/>} ></Route>
-      <Route path="/admin" element={<Admin/>}></Route>
+      <Route path="/admin" element={ 
+        <PrivateRoute>
+             <Admin/>
+      </PrivateRoute>
+      }></Route>
       <Route  path="/Applyjob" element={ <Applyjob/>}></Route>
       <Route path="/Login"  element={ <Login/>}></Route>
 </Routes>

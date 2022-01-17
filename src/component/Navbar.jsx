@@ -16,7 +16,7 @@ import { Link } from "react-router-dom"
         <Link to="/applyjob" >   <div>Applyjob</div></Link>
         <Link to="/Login" >     <div>Login</div></Link>
        
-         <div>Signin</div>
+        
     </div>
 }
 
