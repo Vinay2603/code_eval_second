@@ -71,13 +71,13 @@ const Applyjob =()=>{
             
          }}>
              
-             <h3>Job Title : {el?.title}</h3>
+             <h2>Job Title : {el?.title}</h2>
              <h5>Comapny Name : {el?.name}</h5>
              <h5>Salary : {el?.Salary} LPA</h5>
              <h5>Job Description : {el?.description} </h5>
              <h5>Location : {el?.location}</h5>
              <button  onClick={()=>{
-                 axios.patch('http://localhost:3001/jobs', {
+                 axios.put('http://localhost:3001/jobs', {
                     name : el?.name,
                     title: el?.title,
                     status: !el?.status,
@@ -93,12 +93,14 @@ const Applyjob =()=>{
                   .catch(function (error) {
                     console.log(error);
                   });
+                
+
              }}
                  
                   
                   
                  
-              >{!el?.status ? "APPLY FOR JOB" : "APPLIED ALREADY"} </button>
+              >{!el?.id %2 === 0  ? "APPLY FOR JOB" : "APPLIED ALREADY"} </button>
          </div>
          //company name, job title, salary range, job description, location,
          
