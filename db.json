@@ -1,0 +1,58 @@
+{
+  "jobs": [
+    {
+      "status": false,
+      "name": "tcs",
+      "title": "SDE1",
+      "Salary": "120000",
+      "description": "CS",
+      "location": "MUBBAI",
+      "id": 1
+    },
+    {
+      "status": false,
+      "name": "TCS",
+      "title": "SDE2",
+      "Salary": "220000",
+      "description": "CS",
+      "location": "PUNE",
+      "id": 2
+    },
+    {
+      "status": false,
+      "name": "WIPRO",
+      "title": "SDE1",
+      "Salary": "120000",
+      "description": "CS",
+      "location": "INDORE",
+      "id": 3
+    },
+    {
+      "status": false,
+      "name": "WIPRO",
+      "title": "SDE2",
+      "Salary": "320000",
+      "description": "CS",
+      "location": "PUNE",
+      "id": 4
+    },
+    {
+      "status": false,
+      "name": "TATA",
+      "title": "SDE3",
+      "Salary": "520000",
+      "description": "CS",
+      "location": "NAGPUR",
+      "id": 5
+    },
+    {
+      "status": false,
+      "name": "TATA",
+      "title": "SDE1",
+      "Salary": "120000",
+      "description": "CS",
+      "location": "DELHI",
+      "id": 6
+    }
+  ]
+}
