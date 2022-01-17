@@ -10,7 +10,7 @@
       "id": 1
     },
     {
-      "status": false,
+      "status": true,
       "name": "TCS",
       "title": "SDE2",
       "Salary": "220000",
@@ -19,7 +19,7 @@
       "id": 2
     },
     {
-      "status": false,
+      "status": true,
       "name": "WIPRO",
       "title": "SDE1",
       "Salary": "120000",
@@ -37,7 +37,7 @@
       "id": 4
     },
     {
-      "status": false,
+      "status": true,
       "name": "TATA",
       "title": "SDE3",
       "Salary": "520000",
@@ -53,6 +53,15 @@
       "description": "CS",
       "location": "DELHI",
       "id": 6
+    },
+    {
+      "status": false,
+      "name": "force",
+      "title": "manager",
+      "Salary": "500000",
+      "description": "manger post vacancy",
+      "location": "pune",
+      "id": 7
     }
   ]
 }
