@@ -62,6 +62,20 @@ const Applyjob =()=>{
         }}
         
         >Filter-SDE2</button>
+         <button
+             onClick={()=>{
+                axios.get('http://localhost:3001/jobs?status=true')
+                .then(function (response) {
+                  // handle success
+                  console.log(response.data);
+                  setMainjob(response.data)
+                })
+                .catch(function (error) {
+                  // handle error
+                  console.log(error);
+                })
+             }}
+             >MY APPLIED JOBS</button>
          {mainjobs?.map((el, i)=> 
          
          <div key={i} style={{
@@ -70,6 +84,7 @@ const Applyjob =()=>{
              margin : "20px"
             
          }}>
+            
              
              <h2>Job Title : {el?.title}</h2>
              <h5>Comapny Name : {el?.name}</h5>
@@ -77,7 +92,7 @@ const Applyjob =()=>{
              <h5>Job Description : {el?.description} </h5>
              <h5>Location : {el?.location}</h5>
              <button  onClick={()=>{
-                 axios.put('http://localhost:3001/jobs', {
+                 axios.patch(`http://localhost:3001/jobs/${el.id}`, {
                     name : el?.name,
                     title: el?.title,
                     status: !el?.status,
@@ -100,7 +115,7 @@ const Applyjob =()=>{
                   
                   
                  
-              >{!el?.id %2 === 0  ? "APPLY FOR JOB" : "APPLIED ALREADY"} </button>
+              >{!el?.status   ? "APPLY FOR JOB" : "APPLIED ALREADY"} </button>
          </div>
          //company name, job title, salary range, job description, location,
          

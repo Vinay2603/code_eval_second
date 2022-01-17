@@ -9,7 +9,9 @@ import { Link } from "react-router-dom"
         backgroundColor:  "#FFBCD1",
         justifyContent: "space-evenly",
         color: "#6867AC",
-        padding : "20px"
+        padding : "20px",
+        font: "100px"
+
     }}>
         <Link to="/" >  <div>Home</div></Link>
         <Link to="/admin" >  <div>Admin</div></Link>
